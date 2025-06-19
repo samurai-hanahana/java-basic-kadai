@@ -2,7 +2,6 @@ package kadai_028;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Jyanken_Chapter28 {
@@ -34,9 +33,10 @@ public class Jyanken_Chapter28 {
 	}
 
 	public String getRandom() {
-		Random rand = new Random();
-		int index = (int)Math.floor(rand.nextDouble() * 3);
-		return HANDS[index];
+		String[] hands = {"r", "s", "p"};
+		double randomValue = Math.random() * 3;
+		int index = (int) Math.floor(randomValue);
+		return hands[index];
 	}
 	
 	public void playGame(String myHand, String opponentHand) {
